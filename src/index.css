@@ -1,0 +1,38 @@
+
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+  background-color: black;
+}
+
+h1 {
+  position: static;
+  transform: none;
+  font-size: inherit;
+}
+
+.page-content {
+  animation: pageFadeIn 0.45s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-content {
+    animation: none;
+  }
+}
